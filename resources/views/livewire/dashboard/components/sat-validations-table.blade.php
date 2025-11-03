@@ -3,13 +3,13 @@
         <table class="w-auto text-sm text-neutral-700 dark:text-neutral-400">
             <thead>
                 <tr class="text-xs text-neutral-500 uppercase bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-400">
-                    <th class="py-1 px-2 text-nowrap">UUID</th>
-                    <th class="py-1 px-2 text-nowrap">CFDI Status</th>
-                    <th class="py-1 px-2 text-nowrap">Issuer RFC</th>
-                    <th class="py-1 px-2 text-nowrap">Receiver RFC</th>
-                    <th class="py-1 px-2 text-right">Total</th>
-                    <th class="py-1 px-2 text-nowrap">Response Code</th>
-                    <th class="py-1 px-2 text-nowrap">Cancellable Status</th>
+                    <th class="py-3 px-2 text-nowrap">UUID</th>
+                    <th class="py-3 px-2 text-nowrap">CFDI Status</th>
+                    <th class="py-3 px-2 text-nowrap">Issuer RFC</th>
+                    <th class="py-3 px-2 text-nowrap">Receiver RFC</th>
+                    <th class="py-3 px-2 text-right">Total</th>
+                    <th class="py-3 px-2 text-nowrap">Response Code</th>
+                    <th class="py-3 px-2 text-nowrap">Cancellable Status</th>
                 </tr>
             </thead>
             <tbody>
