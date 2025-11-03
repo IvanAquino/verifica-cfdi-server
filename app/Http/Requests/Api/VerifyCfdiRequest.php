@@ -2,8 +2,12 @@
 
 namespace App\Http\Requests\Api;
 
+use App\Rules\CfdiVerificationUrl;
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @property-read string $qr
+ */
 class VerifyCfdiRequest extends FormRequest
 {
     /**
@@ -11,7 +15,7 @@ class VerifyCfdiRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +26,7 @@ class VerifyCfdiRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'qr' => ['required', 'string', new CfdiVerificationUrl],
         ];
     }
 }

@@ -1,0 +1,47 @@
+---
+description: Create a model
+alwaysApply: false
+---
+
+# Create a model
+
+-   Use the command `php artisan make:model {ModelName} -mf`
+-   You have to use -mf to create migration and factory files
+-   You have to implement the migration file, the model class and the model factory
+-   You have to implement the array `$fillable` and add the fields for the model
+-   You have to implement the function `cast` to casts the fields to corresponding value, if the are no fields those require it, just add it empty.
+-   When the model has relationships add the relation to both models
+-   The model name must always be in English event if the user asks you in another language
+-   The fields must always be in English even if the user asks you in another language
+
+## Example
+
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    public $fillable = [
+        'name',
+        'email',
+        'password',
+        'is_admin',
+    ];
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'is_admin' => 'boolean',
+        ];
+    }
+}
+```
